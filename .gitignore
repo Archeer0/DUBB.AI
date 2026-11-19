@@ -1,0 +1,9 @@
+# Películas, audio y vídeo (pesados y con derechos de autor)
+*.mkv
+*.mp4
+*.wav
+*.srt
+# Entornos, modelos y temporales (se recrean en cada equipo)
+entornos/
+modelos/
+tmp/
