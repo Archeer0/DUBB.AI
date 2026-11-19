@@ -7,7 +7,7 @@ from indextts.infer_v2_5 import IndexTTS2
 ref, n, outdir, texts = sys.argv[1], int(sys.argv[2]), sys.argv[3], sys.argv[4:]
 os.makedirs(outdir, exist_ok=True)
 m = os.path.join(os.environ["DUBB_ROOT"], "modelos/indextts-2.5")
-tts = IndexTTS2(cfg_path=f"{m}/config.yaml", model_dir=m, device="cpu")
+tts = IndexTTS2(cfg_path=f"{m}/config.yaml", model_dir=m)  # elige solo: gráfica del Mac (MPS) si la hay, si no CPU
 for f, text in enumerate(texts, 1):
     for i in range(1, n + 1):
         t = time.time()

@@ -8,7 +8,7 @@ from indextts.infer_v2_5 import IndexTTS2
 ref, emo, outdir, text, alphas = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5:]
 os.makedirs(outdir, exist_ok=True)
 m = os.path.join(os.environ["DUBB_ROOT"], "modelos/indextts-2.5")
-tts = IndexTTS2(cfg_path=f"{m}/config.yaml", model_dir=m, device="cpu")
+tts = IndexTTS2(cfg_path=f"{m}/config.yaml", model_dir=m)  # elige solo: gráfica del Mac (MPS) si la hay, si no CPU
 for i, a in enumerate(alphas, 1):
     t = time.time()
     out = f"{outdir}/mezcla_{a}_toma{i}.wav"

@@ -8,7 +8,7 @@ ref, out, text = sys.argv[1], sys.argv[2], sys.argv[3]
 emo = sys.argv[4] if len(sys.argv) > 4 else None
 m = os.path.join(os.environ["DUBB_ROOT"], "modelos/indextts-2.5")
 t = time.time()
-tts = IndexTTS2(cfg_path=f"{m}/config.yaml", model_dir=m, device="cpu")
+tts = IndexTTS2(cfg_path=f"{m}/config.yaml", model_dir=m)  # elige solo: gráfica del Mac (MPS) si la hay, si no CPU
 print(f"Carga del modelo: {time.time() - t:.0f} s")
 t = time.time()
 tts.infer(spk_audio_prompt=ref, text=text, output_path=out, lang="es", emo_audio_prompt=emo)
