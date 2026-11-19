@@ -1,6 +1,8 @@
 # Probar IndexTTS en el MacBook
 
 Objetivo: medir si el Mac genera la voz más rápido que el PC (PC: ~90 s por frase de 5 s).
+
+**Aviso:** IndexTTS usa unos 9 GB de memoria en el PC. Con un Mac de 8 GB tendrá que tirar del disco (memoria de intercambio) y probablemente irá más lento que el PC. La prueba solo sirve para confirmarlo.
 Todo se instala dentro de la carpeta del proyecto; no toca nada del sistema salvo `uv`.
 
 ## 1. Programas básicos (una sola vez)
